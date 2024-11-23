@@ -1,0 +1,72 @@
+div{
+    margin: 0;
+    padding: 0;
+}
+.smilly{
+    position: absolute;
+    top: 150px;
+    left:50px;
+    transform: translate(-50%,-50%);
+    height: 200px;
+    width: 200px;
+    margin-left: 40%;
+    margin-top: 10%;
+    border-radius: 50%;
+    animation-name: colorAnimate;
+   /* animation-timing-function: ease-in-out;*/
+    animation-duration: 0.25s;
+    animation-delay: 0s;
+   animation-iteration-count: infinite;
+}
+@keyframes colorAnimate {
+    from{
+        background-color: yellow;
+    }
+    to{
+        background-color: red;
+    }
+}
+.eyes:before,.eyes:after{
+    content:"" ;
+    position: absolute;
+    top:60px;
+    height: 30px;
+    width: 30px;
+   background-color: black;
+   border-radius: 50%;
+   transition: 0.5s;
+   display: inline-block;
+   transform: translateX(0%);
+}
+.eyes:before{
+    left: 50px;
+}
+
+.eyes:after{
+    right: 50px;
+}
+
+.lip{
+    content: "";
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    border-radius: 50%;
+   border-bottom: 30px solid black;
+   transform: translateX(0%);
+ }
+.smilly:hover .lip{
+   
+ border-radius: 0%;
+}
+.smilly:hover .eyes:before{
+    height: 10px
+}
+.smilly:hover .eyes:after{
+    height: 10px;
+}
+body{
+    background-color: skyblue;
+}
